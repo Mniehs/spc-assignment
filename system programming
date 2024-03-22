@@ -1,0 +1,141 @@
+Quiz 1 a
+
+
+
+#!/bin/bash
+#function to calculate tax
+calculate tax(){
+if(($(echo "basic_pay>70000"|bc-1));then
+tax=$(echo "scale=2; $basic_pay*0.25"|bc)
+elif(($(echo "$basic_pay>15000 && $basic_pay<=70000"bc)
+tax=$(echo "scale=2; $basic_pay*0.15"|bc)
+ele
+tax=0
+fi
+}
+#prompt the user to enter details
+read -p "enter employee name:"employee_name
+read -p "enter hours worked:"hours_worked
+read -p "enter the rate of work per hour:"rate_per_hour
+#calculate basic pay
+basic_pay=$(echo "$hours_worked*$rate_per_hour"|bc)
+#display results
+echo "employee name:$employee_name"
+echo "hours worked:$hours_worked"
+echo "rate per hour:$rate_per_hour"
+echo "basic pay:$basic_pay"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#!/bin/bash
+#function to calculate tax
+calculate tax(){
+if(($(echo "basic_pay>70000"|bc-1));then
+tax=$(echo "scale=2; $basic_pay*0.25"|bc)
+elif(($(echo "$basic_pay>15000 && $basic_pay<=70000"bc)
+tax=$(echo "scale=2; $basic_pay*0.15"|bc)
+ele
+tax=0
+fi
+}
+#prompt the user to enter details
+read -p "enter employee name:"employee_name
+read -p "enter hours worked:"hours_worked
+read -p "enter the rate of work per hour:"rate_per_hour
+#calculate basic pay
+basic_pay=$(echo "$hours_worked*$rate_per_hour"|bc)
+#calculate tax based on net pay
+if["$basic_pay -gt 70000"];then
+tax=$(basic_pay*25/100)
+elif[$basic_pay -gt 15000] && [$basic_pay -le 70000];then
+tax=$(basic-pay*15/100)
+else
+tax=0
+fi
+#calculate net pay
+net_pay=$(basic_pay-tax)
+#display results
+echo "employee name:$employee_name"
+echo "hours worked:$hours_worked"
+echo "rate per hour:$rate_per_hour"
+echo "basic pay:$basic_pay"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quiz 2
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd>
+
+int main() {
+    FILE *file;
+    char buffer[100]; // Buffer to store read content
+
+    // Open file in write mode
+    file = fopen("example.txt", "w");
+    if (file == NULL) {
+        fprintf(stderr, "Error opening file!\n");
+        exit(1);
+    }
+
+    // Write "hello world" to the file
+    fprintf(file, "hello world");
+
+    // Close the file
+    fclose(file);
+
+    // Open file in read mode
+    file = fopen("example.txt", "r");
+    if (file == NULL) {
+        fprintf(stderr, "Error opening file!\n");
+        exit(1);
+    }
+
+    // Read content from the file
+    fscanf(file, "%s", buffer);
+
+    // Close the file
+    fclose(file);
+
+    // Print the read content
+    printf("Content read from file: %s\n", buffer);
+
+    return 0;
+}
+
+
